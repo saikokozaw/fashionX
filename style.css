@@ -1,0 +1,388 @@
+:root {
+    --primaryColor: #f1f1f1;
+    --firstBlack : #222222;
+    --secondBlack : #555555;
+    --thirdBlack : #252525;
+    --fourthBlack : #000000;
+    --fifthBlack :  #212529;
+    --orangeColor : #eb0028;
+    --whiteColor : #ffffff;
+    --firstGreyColor : #959595;
+    --secondGreyColor : #666666;
+    --thirdGreyColor : #cccccc;
+    --secondaryColor : #2b1f4d;
+    --yellowColor: #ffcc00;
+    --greeColor : #59b210;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body,input{
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: 'Archivo', sans-serif;
+    color: var(--firstBlack);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h3,h4 {
+    font-weight: 500;
+}
+
+.header{
+    position: relative;
+}
+
+.container {
+    max-width: 117rem;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+}
+
+.navigation {
+    position: relative;
+    height: 7rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0 ,0, .1);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    height: 7rem;
+    padding: 0 1rem;
+}
+
+.navLogo a{
+    font-size: 2.5rem;
+    color: var(--firstBlack);
+    padding: 1.6rem;
+    font-weight: 700;
+}
+
+.navHamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.navHamburger svg {
+    height: 2.3rem;
+    width: 2.3rem;
+}
+
+.menuTop {
+    display: none;
+}
+
+.navMenu {
+    width: 50%;
+}
+
+.navList {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.navItem:not(:last-child) {
+    margin-right: 1.6rem;
+}
+
+.navList .navLink:link,
+.navList .navLink:visited {
+    display: inline-block;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: var(--firstBlack);
+    transition: color .3s ease-in-out;
+}
+
+.navList .navLink:hover {
+    color: var(--orangeColor);
+}
+
+.navIcons {
+    display: flex;
+    position: relative;
+}
+
+.navIcons .iconItem svg {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.navIcons .iconItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7rem;
+    border : 1px solid var(--firstBlack);
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.navIcons .iconItem:link,
+.navIcons .iconItem:visited {
+    color: var(--firstBlack);
+}
+
+.navIcons .iconItem:hover {
+    background-color: var(--orangeColor);
+    border: 1px solid var(--firstBlack);
+}
+
+.navIcons .iconItem:not(:last-child){
+    margin-right: 1rem;
+}
+
+.navIcons #cartTotal {
+    font-size: 1rem;
+    position: absolute;
+    top: 2px;
+    right: -6px;
+    background-color: var(--orangeColor);
+    padding: 0.2rem 0.4rem;
+    border-radius: 100%;
+    color: var(--primaryColor);
+}
+
+.hero,
+.hero .glide__slides{
+    background-color: var(--primaryColor);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero .glide__bullet {
+    background-color: var(--firstBlack);
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.hero .glide__arrow {
+    padding: 1.5rem 1.7rem;
+    opacity: 0;
+    border: none;
+    background-color: var(--firstGreyColor);
+    transition: all 0.5s ease-in-out 0.2s;
+}
+
+.glide__arrow:hover{
+    background-color: var(--firstBlack);
+}
+.glide__arrow--left {
+    left : 20rem;
+}
+
+.glide__arrow--right {
+    position: absolute;
+    right : 20rem;
+}
+.hero:hover .glide__arrow{
+    opacity: 1;
+}
+
+.hero:hover .glide__arrow--left{
+    left: 23rem;
+}
+
+.hero:hover .glide__arrow--right{
+    right: 23rem;
+}
+
+.hero .glide__arrow svg{
+    height: 1.8rem;
+    width: 1.8rem;
+    fill: var(--primaryColor);
+}
+
+.hero .glide__arrow{
+    border-radius: 10px;
+}
+
+.heroCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 114rem;
+    margin: 0 atuo;
+    height: 100%;
+    padding-top: 3rem;
+}
+
+.heroLeft{
+    padding : 0 3rem;
+    flex: 0 0 50%;
+}
+.heroBtn {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.4rem;
+    background-color: var(--firstBlack);
+    color: var(--primaryColor);
+    margin-top: 1rem;
+    padding: 1.5rem 4rem;
+    border: 1px solid var(--firstBlack);
+    transition: all 0.3s ease-in-out;
+
+}
+
+.heroBtn:focus{
+    outline: none;
+}
+
+.heroLeft .heroBtn:hover{
+    font-weight: 700;
+    background-color: transparent;
+    color: var(--firstBlack);
+}
+
+.heroLeft h1{
+    margin: 1rem 0;
+}
+
+.heroLeft p{
+    margin-bottom: 1rem;
+}
+
+.heroRight {
+    flex: 0 0 50%;
+    position: relative;
+    text-align: center;
+}
+
+@media only screen and (max-width: 999px){
+    .heroCenter{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .heroRight {
+        top: 50%;
+        position: absolute;
+    }
+    .heroLeft {
+        position: absolute;
+        padding: 0 1rem;
+        top: 20%
+    }
+
+    .heroRight img{
+        width: 55%;
+    }
+
+    .heroBtn {
+        padding: 1.1rem 2.8rem;
+    }
+
+    .hero .glide__arrows{
+        display: none;
+    }
+}
+@media only screen and (max-width:768px){
+    .navMenu {
+        position: fixed;
+        top: 0;
+        left: -30rem;
+        width: 0;
+        background-color: var(--whiteColor);
+        z-index: 9990;
+        height: 100%;
+        transition: all 0.3s;
+    }
+
+    .navMenu.open{
+        left: 0rem;
+        width: 30rem;
+    }
+
+    .navLogo {
+        width: 50%;
+    }
+    .navHamburger {
+        display: block;;
+    }
+    .menuTop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--orangeColor);
+        padding: 1.8rem 1rem;
+    }
+    .menuTop svg{
+        height: 1.6rem;
+        width: 1.6rem;
+        fill: var(--primaryColor);
+    }
+
+    .navCategory {
+        color: var(--whiteColor);
+        font-size: 2.3rem;
+        font-weight: 700;
+    }
+    .navList{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.6rem 1rem;
+    }
+
+    .navItem:not(:last-child){
+        margin-right: 0;
+    }
+    .navItem{
+        width: 100%;
+    }
+    .navList .navLink:link,
+    .navList .navLink:visited {
+        padding: 1.6rem 0;
+        width: 100%;
+        color: var(--secondGreyColor);
+    }
+
+    body.active::before{
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:var(--firstBlack) none no-repeat 0 0;
+        opacity: 0.7;
+        z-index: 999;
+        transition: 0.8s;
+    }
+}
+@media only screen and(max-width: 568px) {
+    .navIcons .iconItem svg{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .navIcons .iconItem {
+        padding: 0.5rem;
+    }
+    
+}
