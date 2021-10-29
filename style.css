@@ -240,6 +240,7 @@ h3,h4 {
 .heroBtn {
     cursor: pointer;
     display: inline-block;
+    margin-left: 40px;
     font-weight: 700;
     font-size: 1.4rem;
     background-color: var(--firstBlack);
@@ -261,18 +262,26 @@ h3,h4 {
     color: var(--firstBlack);
 }
 
+.heroLeft span{
+    margin: 1rem 0;
+    margin-left: 40px;
+}
+
 .heroLeft h1{
     margin: 1rem 0;
+    margin-left: 40px;
 }
 
 .heroLeft p{
     margin-bottom: 1rem;
+    margin-left: 40px;
 }
 
 .heroRight {
     flex: 0 0 50%;
     position: relative;
     text-align: center;
+    margin-left: 40px;
 }
 
 @media only screen and (max-width: 999px){
